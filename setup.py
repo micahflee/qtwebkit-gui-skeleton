@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os, sys
+import os, sys, platform
 
 try:
     from setuptools import setup
@@ -8,6 +8,28 @@ except ImportError:
     from distutils.core import setup
 
 version = open('version').read().strip()
+args = {}
+
+if platform.system() == 'Darwin':
+    args['data_files'] = ['LICENSE', 'README.md', 'version', 'qtwebkit_gui_skeleton']
+    args['app'] = ['install/qtwebkit-gui-skeleton-osx.py']
+    args['options'] = {
+        'py2app': {
+            'argv_emulation': True,
+            'iconfile': 'install/icon.icns',
+            'packages': ['flask'],
+            'site_packages': True,
+            'plist': {
+                'CFBundleName': 'QtWebkitGUISkeleton',
+            }
+        }
+    }
+
+elif platform.system() == 'Windows':
+    pass
+
+else:
+    pass
 
 setup(
     name='qtwebkit-gui-skeleton',
@@ -22,5 +44,6 @@ setup(
         'flask >= 0.8'
     ],
     packages=['qtwebkit_gui_skeleton'],
-    include_package_data=True
+    include_package_data=True,
+    **args
 )

@@ -6,8 +6,8 @@ A skeleton project for making cross-platform GUI desktop apps that are powered b
 
     virtualenv env
     . env/bin/activate
-    python setup.py sdist
-    pip install dist/qtwebkit-gui-skeleton-`cat version`.tar.gz
+    pip install flask
+    pip install py2app
 
 ## Mac OS X
 
