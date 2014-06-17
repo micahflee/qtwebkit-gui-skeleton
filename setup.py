@@ -11,15 +11,15 @@ version = open('version').read().strip()
 args = {}
 
 if platform.system() == 'Darwin':
-    args['data_files'] = ['LICENSE', 'README.md', 'version', 'qtwebkit_gui_skeleton']
+    args['data_files'] = ['LICENSE', 'README.md', 'version']
     args['app'] = ['install/qtwebkit-gui-skeleton-osx.py']
     args['options'] = {
         'py2app': {
             'argv_emulation': True,
-            'includes': ['PyQt4',' PyQt4.QtCore', 'PyQt4.QtGui', 'PyQt4.QtWebkit'],
-            'excludes': ['PyQt4.QtDesigner', 'PyQt4.QtNetwork', 'PyQt4.QtOpenGL', 'PyQt4.QtScript', 'PyQt4.QtSql', 'PyQt4.QtTest', 'PyQt4.QtXml', 'PyQt4.phonon'],
+            'packages': ['flask', 'jinja2', 'qtwebkit_gui_skeleton'],
+            'includes': ['PyQt4',' PyQt4.QtCore', 'PyQt4.QtGui', 'PyQt4.QtWebkit', 'PYQt4.QtNetwork', 'threading'],
+            'excludes': ['PyQt4.QtDesigner', 'PyQt4.QtOpenGL', 'PyQt4.QtScript', 'PyQt4.QtSql', 'PyQt4.QtTest', 'PyQt4.QtXml', 'PyQt4.phonon'],
             'iconfile': 'install/icon.icns',
-            'packages': ['flask'],
             'site_packages': True,
             'plist': {
                 'CFBundleName': 'QtWebkitGUISkeleton',
@@ -43,10 +43,7 @@ setup(
     author_email='micah@micahflee.com',
     url='https://github.com/micahflee/qtwebkit-gui-skeleton',
     license="GPL v2",
-    install_requires=[
-        'flask >= 0.8'
-    ],
-    packages=['qtwebkit_gui_skeleton'],
-    include_package_data=True,
+    #packages=['qtwebkit_gui_skeleton'],
+    #include_package_data=True,
     **args
 )
