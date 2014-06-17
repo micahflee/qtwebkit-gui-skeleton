@@ -25,3 +25,18 @@ Build the .app:
     python setup.py py2app
 
 Now you should have `dist/QtWebkitGUISkeleton.app`.
+
+## RPM-based Linux (Red Hat, Fedora, CentOS)
+
+The first time you're setting up your dev environment:'
+
+    sudo yum install -y rpm-build python-flask python-stem pywebkitgtk
+
+Build and install the .rpm:
+
+    ./build_rpm.sh
+    sudo yum install -y dist/qtwebkit-gui-skeleton-*.rpm
+
+If you already have qtwebkit-gui-skeleton installed, you can reinstall with:
+
+    sudo yum reinstall -y dist/qtwebkit-gui-skeleton-*.rpm

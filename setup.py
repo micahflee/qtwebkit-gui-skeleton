@@ -32,7 +32,13 @@ elif platform.system() == 'Windows':
     pass
 
 else:
-    pass
+    args['packages'] = ['qtwebkit_gui_skeleton']
+    args['include_package_data'] = True
+    args['scripts'] = ['install/qtwebkit-gui-skeleton']
+    args['data_files'] = [
+        ('/usr/share/applications', ['install/qtwebkit-gui-skeleton.desktop']),
+        ('/usr/share/pixmaps', ['install/qtwebkit-gui-skeleton.xpm'])
+    ]
 
 setup(
     name='qtwebkit-gui-skeleton',
@@ -43,7 +49,5 @@ setup(
     author_email='micah@micahflee.com',
     url='https://github.com/micahflee/qtwebkit-gui-skeleton',
     license="GPL v2",
-    #packages=['qtwebkit_gui_skeleton'],
-    #include_package_data=True,
     **args
 )

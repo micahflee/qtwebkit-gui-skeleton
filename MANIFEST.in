@@ -1,5 +1,7 @@
 include LICENSE
 include README.md
 include version
-include webkit_gui_skeleton/static/*
-include webkit_gui_skeleton/templates/*
+include qtwebkit_gui_skeleton/static/*
+include qtwebkit_gui_skeleton/templates/*
+include install/qtwebkit-gui-skeleton.xpm
+include install/qtwebkit-gui-skeleton.desktop

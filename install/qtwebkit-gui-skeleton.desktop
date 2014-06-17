@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=QtWebkit GUI Skeleton
+Comment=Cross-platform GUI apps are cool
+Exec=/usr/bin/qtwebkit-gui-skeleton
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/qtwebkit-gui-skeleton.xpm
