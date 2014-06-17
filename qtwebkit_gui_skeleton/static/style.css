@@ -1,0 +1,11 @@
+body {
+  background-color: #C063F2;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
