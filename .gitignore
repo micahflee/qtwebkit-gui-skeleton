@@ -53,8 +53,7 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-# vim
-*.swp
-
-# other
+# misc
 MANIFEST
+*.swp
+.DS_Store
