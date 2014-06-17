@@ -16,6 +16,8 @@ if platform.system() == 'Darwin':
     args['options'] = {
         'py2app': {
             'argv_emulation': True,
+            'includes': ['PyQt4',' PyQt4.QtCore', 'PyQt4.QtGui', 'PyQt4.QtWebkit'],
+            'excludes': ['PyQt4.QtDesigner', 'PyQt4.QtNetwork', 'PyQt4.QtOpenGL', 'PyQt4.QtScript', 'PyQt4.QtSql', 'PyQt4.QtTest', 'PyQt4.QtXml', 'PyQt4.phonon'],
             'iconfile': 'install/icon.icns',
             'packages': ['flask'],
             'site_packages': True,
@@ -24,6 +26,7 @@ if platform.system() == 'Darwin':
             }
         }
     }
+    args['setup_requires'] = 'py2app'
 
 elif platform.system() == 'Windows':
     pass
