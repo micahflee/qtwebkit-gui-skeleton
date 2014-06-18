@@ -39,6 +39,18 @@ Build the .app:
 
 Now you should have `dist/QtWebkitGUISkeleton.app`.
 
+## Debian-based Linux (Debian, Ubuntu, etc.)
+
+The first time you're setting up your dev environment:'
+
+    sudo apt-get install -y build-essential fakeroot python-all python-stdeb python-flask python-qt4
+    ./build_deb.sh
+
+Build and install the .deb:
+
+    ./build_deb.sh
+    sudo dpkg -i deb_dist/qtwebkit-gui-skeleton_*.deb
+
 ## RPM-based Linux (Red Hat, Fedora, CentOS)
 
 The first time you're setting up your dev environment:'
