@@ -25,7 +25,7 @@ if platform.system() == 'Darwin':
         'py2app': {
             'argv_emulation': True,
             'packages': ['qtwebkit_gui_skeleton', 'flask', 'jinja2'],
-            'includes': ['PyQt4', 'PyQt4.QtCore', 'PyQt4.QtGui', 'PyQt4.QtWebkit', 'PyQt4.QtNetwork', 'threading'],
+            'includes': ['PyQt4'],
             'excludes': ['PyQt4.QtDesigner', 'PyQt4.QtOpenGL', 'PyQt4.QtScript', 'PyQt4.QtSql', 'PyQt4.QtTest', 'PyQt4.QtXml', 'PyQt4.phonon'],
             'iconfile': 'install/icon.icns',
             'site_packages': True,
