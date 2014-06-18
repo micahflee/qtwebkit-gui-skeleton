@@ -14,6 +14,7 @@ The first time you're setting up your dev environment:
 * Go to http://www.py2exe.org/ and download the latest py2exe for python 2.7, 32-bit (I downloaded `py2exe-0.6.9.win32-py2.7.exe`), then install it.
 * Open a command prompt and cd into the qtwebkit-gui-skeleton folder and type: `pip install flask`
 * Go to `C:\Python27\Lib\site-packages\flask\` and delete the folder `testsuite`. This is necessary to work around a py2exe bug.
+* Open a command prompt, cd to the qtwebkit-gui-skeleton folder, and type: `python setup.py py2exe`. This will create a ton of files in `dist`, including `qtwebkit-gui-skeleton.exe`.
 
 ## Mac OS X
 
