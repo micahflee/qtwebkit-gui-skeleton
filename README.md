@@ -56,7 +56,7 @@ Build and install the .deb:
 
 The first time you're setting up your dev environment:'
 
-    sudo yum install -y rpm-build python-flask python-stem pywebkitgtk
+    sudo yum install -y rpm-build python-flask python-stem pyqt4
 
 Build and install the .rpm:
 
